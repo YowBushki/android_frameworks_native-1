@@ -4241,12 +4241,6 @@ static status_t updateDimensionsLocked(const sp<const DisplayDevice>& displayDev
             break;
     }
 
-    if ((*requestedWidth > displayWidth) || (*requestedHeight > displayHeight)) {
-        ALOGE("size mismatch (%d, %d) > (%d, %d)",
-                *requestedWidth, *requestedHeight, displayWidth, displayHeight);
-        return BAD_VALUE;
-    }
-
     if (*requestedWidth == 0) {
         *requestedWidth = displayWidth;
     }
